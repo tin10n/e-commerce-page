@@ -1,19 +1,19 @@
-document.addEventListener('DOMContentLoaded', () => {
-    fetch('products.json')
-        .then(response => {
-            if (!response.ok) {
-                throw new Error("Failed to load products.json");
-            }
-            return response.json();
-        })
-        .then(data => {
-            const grid = document.getElementById('product-grid');
+document.addEventListener("DOMContentLoaded", () => {
+  fetch("products.json")
+    .then((response) => {
+      if (!response.ok) {
+        throw new Error("Failed to load products.json");
+      }
+      return response.json();
+    })
+    .then((data) => {
+      const grid = document.getElementById("product-grid");
 
-            data.forEach(product => {
-                const item = document.createElement('div');
-                item.classList.add('item');
+      data.forEach((product) => {
+        const item = document.createElement("div");
+        item.classList.add("item");
 
-                item.innerHTML = `
+        item.innerHTML = `
                     <div class="item-img">
                         <a href="${product.Link}" target="_blank">
                             <img src="${product.Photo}" alt="${product.Name}">
@@ -30,10 +30,10 @@ document.addEventListener('DOMContentLoaded', () => {
                     </div>
                 `;
 
-                grid.appendChild(item);
-            });
-        })
-        .catch(error => {
-            console.error("Error loading products:", error);
-        });
+        grid.appendChild(item);
+      });
+    })
+    .catch((error) => {
+      console.error("Error loading products:", error);
+    });
 });

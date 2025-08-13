@@ -1,102 +1,79 @@
-[ {
+[
+  {
     "Name": "Saint Laurent",
-    "Price": 1500.00,
+    "Price": 1500.0,
     "Description": "Shopping Bag East-West Tote in Smooth Leather",
     "Photo": "/Images/b1.jpeg"
+  },
 
-
-},
-
-{
+  {
     "Name": "Tom Ford",
-    "Price": 2250.00,
+    "Price": 2250.0,
     "Description": "Audrey Large Tote Bag in Grain Leather",
     "Photo": "/Images/b2.jpeg"
+  },
 
-
-},
-
-{
+  {
     "Name": "Valentino Garavani",
-    "Price": 1890.00,
+    "Price": 1890.0,
     "Description": "Antibes Medium Canvas Shopping Tote Bage",
     "Photo": "/Images/b3.jpeg"
-
-
-},
-{
+  },
+  {
     "Name": "Balmain",
-    "Price": 1350.00,
+    "Price": 1350.0,
     "Description": "Embleme Shopper Tote Bag in Grained Leather",
     "Photo": "/Images/b4.webp"
-
-
-},
-{
+  },
+  {
     "Name": "Chloe",
-    "Price": 2090.00,
+    "Price": 2090.0,
     "Description": "Spin North-South Tote Bag in Leather",
     "Photo": "/Images/b5.webp"
-
-
-},
-{
+  },
+  {
     "Name": "Chloe",
-    "Price": 950.00,
+    "Price": 950.0,
     "Description": "Woody Large Mifuko Basket Bag in Fair Trade Paper Embellished with Linen",
     "Photo": "/Images/b6.jpeg"
-
-
-},
-{
+  },
+  {
     "Name": "Marc Jacobs",
-    "Price": 395.00,
+    "Price": 395.0,
     "Description": "The Small Leather Tote Bag",
     "Photo": "/Images/b7.webp"
+  },
 
-
-},
-
-{
+  {
     "Name": "Saint Laurent",
-    "Price": 2350.00,
+    "Price": 2350.0,
     "Description": "Niki Medium YSL Shopper Tote Bag in Crinkled Leather",
     "Photo": "/Images/b8.jpeg"
-
-
-},
-{
+  },
+  {
     "Name": "Saint Laurent",
-    "Price": 2500.00,
+    "Price": 2500.0,
     "Description": "Paris VII Small YSL Hobo Bag in Grained Deer Leather",
     "Photo": "/Images/b9.webp"
-
-
-},
-{
+  },
+  {
     "Name": "Marc Jacobs",
-    "Price": 795.00,
+    "Price": 795.0,
     "Description": "The Dakota Belted Leather Tote Bag",
     "Photo": "/Images/b10.webp"
+  },
 
-
-},
-
-{
+  {
     "Name": "Tom Ford",
-    "Price": 3490.00,
+    "Price": 3490.0,
     "Description": "Tara Flap Shoulder Bag in Grain Leather",
     "Photo": "/Images/b11.webp"
+  },
 
-
-},
-
-{
+  {
     "Name": "Valentino Garavani",
-    "Price": 2350.00,
+    "Price": 2350.0,
     "Description": "Rockstud Medium Leather Tote Bag",
     "Photo": "/Images/b12.webp"
-
-
-}
+  }
 ]
