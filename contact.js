@@ -13,7 +13,7 @@ function showError(input, message) {
   const small = formControl.querySelector("small");
   small.innerText = message;
 }
-
+ 
 // Show success message
 function showSuccess(input) {
   const formControl = input.parentElement;

@@ -12,7 +12,7 @@ document.addEventListener("DOMContentLoaded", () => {
       data.forEach((product) => {
         const item = document.createElement("div");
         item.classList.add("item");
-
+ 
         item.innerHTML = `
                     <div class="item-img">
                         <a href="${product.Link}" target="_blank">
