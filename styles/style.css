@@ -6,8 +6,7 @@ main {
 }
 
 #main-img {
-  width: 100vw;
-  margin: 0 auto;
+  width: 100%;
 }
 
 #info-header {
@@ -21,19 +20,31 @@ main {
 
 #grid-section {
   display: grid;
-  padding: 0.8em;
-  grid-row-gap: 1rem;
+  grid-template-columns: 1fr;
+  padding: 2rem;
+  gap: 2rem;
+  align-items: center;
 }
 
-#about-div {
+.grid-item {
+  padding: 1rem;
+}
+
+.text-selection {
+  text-align: center;
+}
+
+#home-div {
   display: flex;
   flex-direction: column;
   gap: 1em;
 }
 
 #un-img {
+  width: 100%;
+  max-width: 500px;
+  height: auto;
   margin: 0 auto;
-  width: 100vw;
 }
 
 .hero-section {
@@ -56,7 +67,7 @@ main {
   top: 30%;
   left: 10%;
   color: rgb(255, 251, 251);
-  text-shadow: 1px 1px 4px rgb(11, 11, 11);
+  text-shadow: 1px 1px 4px rgb(138, 129, 129);
 }
 
 .hero-btn {
@@ -68,85 +79,26 @@ main {
   font-weight: bold;
 }
 
-/*-------------- footer section code ---------------*/
-
-.shared__footer {
-  margin-top: 150px;
-  width: 100%;
-  padding: 100px 15%;
-  background: rgb(72, 70, 70);
-  color: rgb(255, 251, 251);
-  display: flex;
-}
-
-.shared__footer div {
-  text-align: center;
-}
-
-.col__2 {
-  flex-grow: 2;
-}
-
-.shared__footer div h2 {
-  font-weight: 300;
-  margin-bottom: 30px;
-  letter-spacing: 1px;
-}
-
-.col__1 a {
-  display: block;
-  text-decoration: none;
-  color: rgb(255, 251, 251);
-  margin-bottom: 10px;
-}
-
-form input {
-  width: 400px;
-  height: 45px;
-  border-radius: 4px;
-  text-align: center;
-  margin-top: 20px;
-  margin-bottom: 40px;
-  outline: none;
-  border: none;
-}
-
-form button {
-  background: transparent;
-  border: 2px solid rgb(255, 251, 251);
-  color: rgb(255, 251, 251);
-  border-radius: 30px;
-  padding: 10px 30px;
-}
-
-.social__links {
-  margin-top: 30px;
-}
-
-.social__links i {
-  font-size: 22px;
-  margin: 10px;
-  cursor: pointer;
-  outline: none;
-  color: rgb(255, 251, 251);
-}
-
 /*-------------- responsiveness for devices ---------------*/
 
-@media screen and (min-width: 576px) {
-  .item-grid {
-    grid-template-columns: repeat(2, 1fr);
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  #grid-section {
+    grid-template-columns: 1fr 1fr;
+    text-align: left;
+  }
+
+  .text-section {
+    padding-right: 2rem;
   }
 }
 
-@media screen and (min-width: 992px) {
-  .item-grid {
-    grid-template-columns: repeat(3, 1fr);
+@media screen and (min-width: 1024px) {
+  #grid-section {
+    grid-template-columns: 1fr 1fr;
+    text-align: left;
   }
-}
 
-@media screen and (min-width: 1200px) {
-  .item-grid {
-    grid-template-columns: repeat(4, 1fr);
+  .text-section {
+    padding-right: 2rem;
   }
 }

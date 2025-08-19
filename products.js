@@ -1,18 +1,23 @@
+// Allowing JSON to be fetched, to get product data.
+// In case there is an Error, it will load the string instead.
 document.addEventListener("DOMContentLoaded", () => {
   fetch("products.json")
     .then((response) => {
       if (!response.ok) {
         throw new Error("Failed to load products.json");
       }
+// Converting response to array.
       return response.json();
     })
     .then((data) => {
       const grid = document.getElementById("product-grid");
 
+// Looping through each product in the array, as well as creating a div for each product.
       data.forEach((product) => {
         const item = document.createElement("div");
         item.classList.add("item");
- 
+
+// Adding the product HTML inside the div.
         item.innerHTML = `
                     <div class="item-img">
                         <a href="${product.Link}" target="_blank">
@@ -29,7 +34,7 @@ document.addEventListener("DOMContentLoaded", () => {
                         <p class="price">${product.Description}</p>
                     </div>
                 `;
-
+// Adding each item into the grid.
         grid.appendChild(item);
       });
     })

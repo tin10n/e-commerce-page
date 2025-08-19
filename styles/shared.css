@@ -11,11 +11,18 @@
 }
 
 body {
-  font-family: "Avenir Next", sans-serif;
+  font-family: "Montserrat", sans-serif;
   background-color: whitesmoke;
 }
 
+h1, h2 {
+  font-family: 'Playfair Display', serif;
+}
+
 /*-------------- header section code ---------------*/
+html{
+  scroll-behavior: smooth;
+}
 
 header {
   display: flex;
@@ -28,6 +35,7 @@ header {
 #header-logo {
   width: 12em;
   height: 7em;
+  max-width: 100%;
 }
 
 .shared__ul {
@@ -38,7 +46,6 @@ header {
 
 .link__page {
   padding: 0.5em;
-  margin: 0.5em 0;
 }
 
 .link__page:hover {
@@ -64,88 +71,149 @@ a:visited {
 /*-------------- footer section code ---------------*/
 
 .shared__footer {
-  margin-top: 150px;
-  width: 100%;
-  padding: 100px 15%;
-  background: rgb(72, 70, 70);
-  color: rgb(255, 251, 251);
   display: flex;
-}
-
-.shared__footer div {
+  flex-direction: column;
+  gap: 3rem;
   text-align: center;
-}
-
-.col__2 {
-  flex-grow: 2;
+  background: #484646;
+  color: white;
+  padding: 3rem 2rem;
 }
 
 .shared__footer div h2 {
   font-weight: 300;
-  margin-bottom: 30px;
+  margin-bottom: 20px;
   letter-spacing: 1px;
+  font-size: 1.2rem;
 }
 
 .col__1 a {
   display: block;
-  text-decoration: none;
-  color: rgb(255, 251, 251);
   margin-bottom: 10px;
+  color: white;
+  transition: opacity 0.3s;
+}
+
+.col__1 a:hover {
+  opacity: 0.7;
 }
 
 form input {
-  width: 400px;
+  width: 100%;
+  max-width: 400px;
   height: 45px;
   border-radius: 4px;
   text-align: center;
   margin-top: 20px;
-  margin-bottom: 40px;
-  outline: none;
+  margin-bottom: 20px;
   border: none;
+  outline: none;
 }
 
 form button {
   background: transparent;
-  border: 2px solid rgb(255, 251, 251);
-  color: rgb(255, 251, 251);
+  border: 2px solid white;
+  color: white;
   border-radius: 30px;
   padding: 10px 30px;
+  cursor: pointer;
 }
 
-.social__links {
-  margin-top: 30px;
+form button:hover {
+  background-color: white;
+  color: #484646;
 }
 
 .social__links i {
   font-size: 22px;
-  margin: 10px;
+  margin: 0 10px;
   cursor: pointer;
-  outline: none;
-  color: rgb(255, 251, 251);
+  color: white;
 }
 
 /*-------------- media query header/footer code for tablet ---------------*/
-@media all and (min-width: 768px) {
-  .shared__ul {
-    /* display: flex; */
-    gap: 2em;
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  header {
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 1rem 2rem;
   }
 
   .shared__nav {
-    display: flex;
-    align-items: center;
+    margin-top: 0;
+    width: auto;
   }
 
-  footer {
-    padding: 2em;
+  .shared__ul {
+    flex-direction: row;
+    gap: 2em;
+  }
+
+  .shared__footer {
+    flex-direction: row;
+    flex-wrap: wrap;
+    text-align: left;
+    padding: 4rem 3rem;
+    justify-content: space-between;
+  }
+
+  .col__1,
+  .col__2,
+  .col__3 {
+    flex: 1 1 30%;
+  }
+
+  form input {
+    max-width: 100%;
   }
 }
 
 /*-------------- media query footer code for desktop ---------------*/
-@media all and (min-width: 1025px) {
-  footer {
+@media screen and (min-width: 1024px) {
+  header {
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 1.5rem 5rem;
+  }
+
+  #header-logo {
+    width: 13em;
+  }
+
+  .shared__ul {
+    flex-direction: row;
+    gap: 3em;
+  }
+
+  .shared__footer {
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 5rem 10%;
+    text-align: left;
+  }
+
+  .col__1,
+  .col__2,
+  .col__3 {
+    flex: 1;
+    margin-right: 2rem;
+  }
+
+  .col__2 form {
     display: flex;
-    justify-content: space-around;
-    align-items: end;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  form input {
+    max-width: 100%;
+  }
+
+  form button {
+    margin-top: 0.5rem;
+  }
+
+  .social__links {
+    margin-top: 2rem;
   }
 }

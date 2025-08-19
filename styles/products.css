@@ -22,7 +22,7 @@ p {
 .container {
   max-width: 1170px;
   margin: 0 auto;
-  padding: 40px 16px;
+  padding: 3rem 1.5rem;
 }
 
 .heading-title {
