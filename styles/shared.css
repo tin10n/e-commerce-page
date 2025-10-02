@@ -1,54 +1,60 @@
-/* CSS RESET */
-* {
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box;
-}
+/* ------------------- CSS RESET ------------------- */
 * {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
 }
 
+html{
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: "Montserrat", sans-serif;
   background-color: whitesmoke;
+  line-height: 1.6;
 }
 
 h1, h2 {
   font-family: 'Playfair Display', serif;
 }
 
-/*-------------- header section code ---------------*/
-html{
-  scroll-behavior: smooth;
-}
-
+/* ------------------- HEADER ------------------- */
 header {
   display: flex;
   flex-direction: column;
   align-items: center;
   border-bottom: 1px solid lightgrey;
-  box-shadow: 0 6px 15px 0 rgba(174, 209, 255, 0.274);
+  box-shadow: 0 6px 15px rgba(174, 209, 255, 0.274);
+  padding: 1rem;
 }
 
-#header-logo {
+#header__logo--link {
   width: 12em;
-  height: 7em;
+  height: auto;
   max-width: 100%;
 }
 
+.shared__nav {
+  margin-top: 1rem;
+}
+
 .shared__ul {
-  list-style-type: none;
+  list-style: none;
   display: flex;
-  gap: 0.3em;
+  flex-direction: column;
+  gap: 0.5em;
+  text-align: center;
 }
 
-.link__page {
+.link__page a {
   padding: 0.5em;
+  text-decoration: none;
+  color: black;
+  transition: all 0.3s ease;
 }
 
-.link__page:hover {
+.link__page a:hover {
   cursor: pointer;
   text-decoration: underline;
 }
@@ -66,10 +72,10 @@ a:visited {
   font-weight: bold;
   background-color: rgb(255, 200, 0);
   border-radius: 30px;
+  padding: 0.5em 1em;
 }
 
-/*-------------- footer section code ---------------*/
-
+/* ------------------- FOOTER ------------------- */
 .shared__footer {
   display: flex;
   flex-direction: column;
@@ -82,14 +88,14 @@ a:visited {
 
 .shared__footer div h2 {
   font-weight: 300;
-  margin-bottom: 20px;
+  margin-bottom: 1rem;
   letter-spacing: 1px;
   font-size: 1.2rem;
 }
 
 .col__1 a {
   display: block;
-  margin-bottom: 10px;
+  margin-bottom: 0.5rem;
   color: white;
   transition: opacity 0.3s;
 }
@@ -117,6 +123,7 @@ form button {
   border-radius: 30px;
   padding: 10px 30px;
   cursor: pointer;
+  transition: all 0.3s ease;
 }
 
 form button:hover {
@@ -131,7 +138,9 @@ form button:hover {
   color: white;
 }
 
-/*-------------- media query header/footer code for tablet ---------------*/
+/* ------------------- RESPONSIVE ------------------- */
+
+/* Tablet */
 @media screen and (min-width: 768px) and (max-width: 1024px) {
   header {
     flex-direction: row;
@@ -151,7 +160,6 @@ form button:hover {
 
   .shared__footer {
     flex-direction: row;
-    flex-wrap: wrap;
     text-align: left;
     padding: 4rem 3rem;
     justify-content: space-between;
@@ -162,23 +170,53 @@ form button:hover {
   .col__3 {
     flex: 1 1 30%;
   }
-
-  form input {
-    max-width: 100%;
-  }
 }
 
-/*-------------- media query footer code for desktop ---------------*/
+/* Desktop */
 @media screen and (min-width: 1024px) {
+    header {
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 1rem 2rem;
+  }
+
+  .shared__nav {
+    margin-top: 0;
+    width: auto;
+  }
+
+  .shared__ul {
+    flex-direction: row;
+    gap: 2em;
+  }
+
+  .shared__footer {
+    flex-direction: row;
+    text-align: left;
+    padding: 4rem 3rem;
+    justify-content: space-between;
+  }
+
+  .col__1,
+  .col__2,
+  .col__3 {
+    flex: 1 1 30%;
+  }
+  
   header {
     flex-direction: row;
     justify-content: space-between;
     padding: 1.5rem 5rem;
   }
 
-  #header-logo {
+   #header__logo--link {
     width: 13em;
   }
+
+  .shared__nav {
+    margin-top: 0;
+    width: auto;
+   } 
 
   .shared__ul {
     flex-direction: row;
@@ -188,7 +226,7 @@ form button:hover {
   .shared__footer {
     flex-direction: row;
     justify-content: space-between;
-    padding: 5rem 10%;
+    padding: 5rem 4rem;
     text-align: left;
   }
 
@@ -216,4 +254,12 @@ form button:hover {
   .social__links {
     margin-top: 2rem;
   }
+
+  .shared__footer div h2 {
+  font-weight: 300;
+  margin-bottom: 1rem;
+  letter-spacing: 1px;
+  font-size: 1.2rem;
 }
+}
+
