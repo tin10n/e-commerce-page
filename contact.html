@@ -23,67 +23,70 @@
     </header>
 
     <!--  -->
-    <main>
-    <section>
-    <div class= "contact-info" >
-               <section>
-            <img id="main-img" src="Images/sl1.avif" alt="">
-        </section>
-      <div id="contact__options">
-        <h1> Can't Find What Your Looking For?</h1>
-        <h2>Call Us:</h2>
+     <main>
+    <section>            
+    <img id="main-img" src="Images/sl1.avif" alt="Floral Valentino Bag">
+    <h1 class= "contact__title">Contact Us</h1>
+      <section class="contact__container">
+      <div class="contact__options">
+
+       <div class="contact__details">
+      <h2 class="contact_subtitle"> Can't Find What Your Looking For?</h2>
+      <h3 class="contact__method">Call Us:</h3>
         <p>
           For general inquiries and questions about your order status, give us a
           ring. We’re always happy to hear from you. Hours: 7 AM to 1 PM EST daily.
         </p>
-        <p><a href="tel:+12127847670">+1‑212‑784‑7670</a></p>
+        <p><a href="tel:+12127847670" aria-label="Call SZN support at +1 212 784 7670">+1-212-784-7670</a></p>
 
-        <h2>Text Us:</h2>
-        <p>Hours: 7am to 1am EST 7 days a week</p>
-
-        <p>
+      <h3 class="contact__method">Text Us:</h3>
+      <p>Hours: 7am to 1am EST 7 days a week</p>
+      <p>
           Text <strong>Hello</strong> to <a href="sms:+12404484442">+1‑240‑448‑4442</a> to speak with us!</p>
-
           <em>
             By texting the SZN: Autumn Customer Care team, you agree to receive
             text messages. We use your personal information to respond to your
             MESSAGES and for training and quality purposes. Read our privacy
-            policy for more details.</em
-          >
+            policy for more details.</em>
         </p>
 
-        <h2>Live Chat:</h2>
+      <h3 class="contact__method">Live Chat:</h3>
         <p>Available 24/7 — our Customer Care team is here for you! </p>
       </div>
-    </section>
+    </div>
 
-       <body>
-    <div class="form-container">
-      <form id="form" class="form">
-        <h2>Contact Us</h2>
+     <!-- Contact Form -->
+    <div class="contact__form--container">
+      <form id="form" class="contact__form">
+        <h2 class="contact__form--title">Send Us a Message</h2>
+        
         <div class="form-control">
-          <label for="first-name">First Name</label>
-          <input type="text" id="firstname" placeholder="First Name" required />
+          <label for="firstname">First Name</label>
+          <input type="text" id="firstname" name="firstname" placeholder="First Name" required />
           <small>Error Message</small>
         </div>
+
         <div class="form-control">
-          <label for="last-name">Last Name</label>
-          <input type="text" id="lastname" placeholder="Last Name" required />
+          <label for="lastname">Last Name</label>
+          <input type="text" id="lastname" name="lastname" placeholder="Last Name" required />
           <small>Error Message</small>
         </div>
+
         <div class="form-control">
           <label for="email">Email</label>
-          <input type="text" id="email" placeholder="Email" required />
+          <input type="text" id="email" name="email" placeholder="Email" required />
           <small>Error Message</small>
         </div>
+
         <div class="form-control">
           <label for="number">Number</label>
-          <input type="text" id="number" placeholder="Phone Number" required />
+          <input type="text" id="number" name="number" placeholder="Phone Number" required />
           <small>Error Message</small>
         </div>
+
         <div class="form-control">
           <label for="topic">Topic</label>
-          <select id="topic" required>
+          <select id="topic" name="topic" required>
             <option value="">Select A Topic</option>
             <option value="1">Online Orders</option>
             <option value="2">In Store Purchases</option>
@@ -95,19 +98,18 @@
           </select>
           <small>Error Message</small>
         </div>
+
         <div class="form-control">
           <label for="message">Message</label>
-          <input
-            type="text"
-            id="message"
-            placeholder="Type your message here.."
-          />
+          <textarea id="message" name="message" placeholder="Type your message here..." required></textarea>
           <small>Error Message</small>
         </div>
-        <button>Send Message</button>
+
+        <button type="submit" aria-label="Send Message">Send Message</button>
       </form>
     </div>
-  </main>
+  </section>
+</main>
 
 <!--  -->
     <footer class="shared__footer">
