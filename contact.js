@@ -3,7 +3,7 @@ const firstname = document.getElementById("firstname");
 const lastname = document.getElementById("lastname");
 const email = document.getElementById("email");
 const phonenumber = document.getElementById("number");
-const topic = document.getElementById("topic"); // Updated to match the select field
+const topic = document.getElementById("topic"); 
 const message = document.getElementById("message");
 
 // Show input error message
@@ -31,7 +31,7 @@ function checkEmail(input) {
   }
 }
 
-// Check phone number is valid (basic format validation)
+// Check phone number is valid
 function checkPhoneNumber(input) {
   const re = /^[0-9]{10,15}$/;
   if (re.test(input.value.trim())) {
@@ -115,6 +115,6 @@ form.addEventListener("submit", function (e) {
   // If no errors, proceed with form submission
   const hasErrors = form.querySelectorAll(".form-control.error").length > 0;
   if (!hasErrors) {
-    form.submit(); // Submit the form (or you can replace with AJAX submission)
+    form.submit(); // Submit the form 
   }
 });
