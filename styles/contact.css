@@ -1,11 +1,10 @@
+/* ------------------- BASE ------------------- */
 body {
-  background-color: #f9fafb;
   font-family: 'Open Sans', sans-serif;
   align-items: center;
   justify-content: center;
   min-height: 100vh;
-  margin: 0;
-  padding: 1rem;
+  margin: 0 1rem;
 }
 
 main {
@@ -181,7 +180,7 @@ button:hover {
     margin-right: auto;
   }
 
-    .contact__options {
+  .contact__options {
     flex: 1;
   }
 

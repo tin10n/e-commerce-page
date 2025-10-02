@@ -9,12 +9,16 @@ p {
   margin: 1rem 0;
 }
 
+main {
+    padding-top: 1rem;
+}
+
 .wrapper {
   font-family: Tahoma, sans-serif;
 }
 
 .container {
-  max-width: 1170px;
+  max-width: 100%;
   margin: 0 auto;
   padding: 3rem 1.5rem;
 }

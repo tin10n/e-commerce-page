@@ -13,6 +13,7 @@ body {
   font-family: "Montserrat", sans-serif;
   background-color: whitesmoke;
   line-height: 1.6;
+  margin: 0 1rem;
 }
 
 h1, h2 {
@@ -202,64 +203,8 @@ form button:hover {
   .col__3 {
     flex: 1 1 30%;
   }
-  
-  header {
-    flex-direction: row;
-    justify-content: space-between;
-    padding: 1.5rem 5rem;
-  }
-
-   #header__logo--link {
-    width: 13em;
-  }
-
-  .shared__nav {
-    margin-top: 0;
-    width: auto;
-   } 
-
-  .shared__ul {
-    flex-direction: row;
-    gap: 3em;
-  }
-
-  .shared__footer {
-    flex-direction: row;
-    justify-content: space-between;
-    padding: 5rem 4rem;
-    text-align: left;
-  }
-
-  .col__1,
-  .col__2,
-  .col__3 {
-    flex: 1;
-    margin-right: 2rem;
-  }
-
-  .col__2 form {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-  }
 
   form input {
     max-width: 100%;
   }
-
-  form button {
-    margin-top: 0.5rem;
-  }
-
-  .social__links {
-    margin-top: 2rem;
-  }
-
-  .shared__footer div h2 {
-  font-weight: 300;
-  margin-bottom: 1rem;
-  letter-spacing: 1px;
-  font-size: 1.2rem;
 }
-}
-
