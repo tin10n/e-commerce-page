@@ -1,3 +1,4 @@
+/* ------------------- BASE ------------------- */
 h1 {
   font-size: 2rem;
   font-weight: bold;
@@ -12,44 +13,51 @@ p {
   font-family: Tahoma, sans-serif;
 }
 
-#main-img {
-  width: 100vw;
-  height: 100%;
-  margin: 0 auto;
-  margin-bottom: 16px;
-}
-
 .container {
   max-width: 1170px;
   margin: 0 auto;
   padding: 3rem 1.5rem;
 }
 
-.heading-title {
+.heading--title {
   text-align: center;
   color: #2c2c2c;
 }
 
-.heading-title p {
+.heading--title p {
   margin: 16px auto 32px auto;
   max-width: 600px;
   opacity: 0.7;
 }
 
-.text {
-  background-color: white;
+/* ------------------- PRODUCT GRID ------------------- */
+.item--grid {
+  display: grid;
+  gap: 28px;
 }
 
-.item-img {
+.item {
+  background-color: white;
+  border-radius: 1px;
+  overflow: hidden;
+  transition: transform 0.2s ease;
+}
+
+.item:hover {
+  transform: translateY(-4px);
+}
+
+/* ------------------- PRODUCT GRID ------------------- */
+.item--img {
   position: relative;
 }
 
-.item-img img {
+.item--img img {
   width: 100%;
   display: block;
 }
 
-.item-action {
+.item--action {
   position: absolute;
   right: 0;
   top: 0;
@@ -58,7 +66,7 @@ p {
   transition: all 0.2s linear;
 }
 
-.item-action a {
+.item--action a {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -72,12 +80,12 @@ p {
   transition: all 0.2s linear;
 }
 
-.item-action a:hover {
+.item--action a:hover {
   background-color: #2c2c2c;
   color: white;
 }
 
-.item-details {
+.item--details {
   padding: 20px 16px;
   text-align: center;
   text-transform: capitalize;
@@ -93,6 +101,7 @@ p {
   opacity: 1;
 }
 
+/* ------------------- WISHLIST ------------------- */
 .buy,
 .wishlist {
   position: relative;
@@ -123,30 +132,26 @@ p {
   opacity: 1;
 }
 
-.item-grid {
+.item--grid {
   display: grid;
   gap: 28px;
 }
 
-footer {
-  width: 100%;
-  background-color: #f2f2f2;
-}
-
+/* ------------------- RESPONSIVENESS ------------------- */
 @media screen and (min-width: 576px) {
-  .item-grid {
+  .item--grid {
     grid-template-columns: repeat(2, 1fr);
   }
 }
 
-@media screen and (min-width: 992px) {
-  .item-grid {
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  .item--grid {
     grid-template-columns: repeat(3, 1fr);
   }
 }
 
-@media screen and (min-width: 1200px) {
-  .item-grid {
+@media screen and (min-width: 1024px) {
+  .item--grid {
     grid-template-columns: repeat(4, 1fr);
   }
 }
